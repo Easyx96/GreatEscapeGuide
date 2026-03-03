@@ -84,16 +84,16 @@ function App() {
         <Box sx={styles.overlay}>
           <Container maxWidth="sm" sx={{ padding: '0 12px' }}>
             <Paper elevation={0} sx={styles.header}>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '16px' }}>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '10px' }}>
                 <Box>
-                  <Typography variant="h5" component="h1" sx={styles.headerTitle}>
+                  <Typography variant="h5" component="h1" sx={{ ...styles.headerTitle, fontSize: '1.25rem' }}>
                     🏛️ {t.headerTitle}
                   </Typography>
-                  <Typography variant="body2" sx={{ marginTop: '4px', opacity: 0.85 }}>
+                  <Typography variant="body2" sx={{ marginTop: '2px', opacity: 0.85, fontSize: '0.75rem' }}>
                     Ancient Olympia · Greece
                   </Typography>
                 </Box>
-                <Box sx={{ display: 'flex', gap: '4px' }}>
+                <Box sx={{ display: 'flex', gap: '3px' }}>
                   {[
                     { code: 'en', flag: '🇬🇧' },
                     { code: 'de', flag: '🇩🇪' },
@@ -105,11 +105,11 @@ function App() {
                       onClick={() => setLanguage(lang.code)}
                       aria-label={`Switch to ${lang.code}`}
                       sx={{
-                        minWidth: 36,
-                        minHeight: 36,
-                        padding: '4px',
-                        borderRadius: '8px',
-                        fontSize: '22px',
+                        minWidth: 32,
+                        minHeight: 32,
+                        padding: '2px',
+                        borderRadius: '6px',
+                        fontSize: '18px',
                         background: language === lang.code ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.2)',
                         border: language === lang.code ? '2px solid #f59e0b' : '1px solid rgba(255,255,255,0.3)',
                         '&:hover': { background: 'rgba(255,255,255,0.85)' },
@@ -130,8 +130,8 @@ function App() {
 
             {renderContent()}
             
-            <Box sx={{ marginTop: '12px', textAlign: 'center' }}>
-              <Typography variant="body2" sx={{ color: '#6b7280', fontStyle: 'italic' }}>
+            <Box sx={{ marginTop: '6px', textAlign: 'center' }}>
+              <Typography variant="body2" sx={{ color: '#6b7280', fontStyle: 'italic', fontSize: '0.75rem' }}>
                 {t.enjoyStay}
               </Typography>
             </Box>

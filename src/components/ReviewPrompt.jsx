@@ -4,21 +4,21 @@ export const ReviewPrompt = ({ t, styles }) => {
   const googleReviewUrl = 'https://g.page/r/YOUR_GOOGLE_PLACE_ID/review';
   
   return (
-    <Box sx={{ marginTop: '14px' }}>
+    <Box sx={{ marginTop: '8px' }}>
       <Card sx={styles.card}>
-        <CardContent>
-          <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+        <CardContent sx={{ padding: '10px !important' }}>
+          <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
             <Box
               sx={{
-                width: 44,
-                height: 44,
-                borderRadius: '14px',
+                width: 36,
+                height: 36,
+                borderRadius: '10px',
                 background: 'rgba(234, 179, 8, 0.12)',
                 border: '1px solid rgba(234, 179, 8, 0.40)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: 22,
+                fontSize: 18,
                 flexShrink: 0,
               }}
               aria-hidden="true"
@@ -26,10 +26,10 @@ export const ReviewPrompt = ({ t, styles }) => {
               ⭐
             </Box>
             <Box sx={{ flex: 1 }}>
-              <Typography variant="subtitle1" sx={{ fontWeight: 900, color: '#0f172a' }}>
+              <Typography variant="subtitle1" sx={{ fontWeight: 900, color: '#0f172a', fontSize: '0.85rem' }}>
                 {t.reviewTitle}
               </Typography>
-              <Typography variant="body2" sx={{ marginTop: '4px', color: '#4b5563' }}>
+              <Typography variant="body2" sx={{ marginTop: '2px', color: '#4b5563', fontSize: '0.75rem' }}>
                 {t.reviewBody}
               </Typography>
               <Button
@@ -38,13 +38,14 @@ export const ReviewPrompt = ({ t, styles }) => {
                 rel="noopener noreferrer"
                 variant="contained"
                 sx={{
-                  marginTop: '10px',
+                  marginTop: '6px',
                   backgroundColor: '#4285F4',
                   color: '#fff',
                   fontWeight: 800,
-                  borderRadius: '14px',
+                  borderRadius: '10px',
                   textTransform: 'none',
-                  padding: '10px 14px',
+                  padding: '6px 10px',
+                  fontSize: '0.75rem',
                   '&:hover': { backgroundColor: '#3367D6' },
                 }}
               >
