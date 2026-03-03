@@ -93,25 +93,31 @@ function App() {
                     Ancient Olympia · Greece
                   </Typography>
                 </Box>
-                <Box>
-                  <select
-                    value={language}
-                    onChange={(e) => setLanguage(e.target.value)}
-                    aria-label="Language"
-                    style={{
-                      borderRadius: 999,
-                      padding: '6px 10px',
-                      border: '1px solid rgba(209, 213, 219, 1)',
-                      background: 'rgba(255,255,255,0.96)',
-                      fontSize: 13,
-                      fontWeight: 700,
-                    }}
-                  >
-                    <option value="en">EN</option>
-                    <option value="de">DE</option>
-                    <option value="fr">FR</option>
-                    <option value="el">EL</option>
-                  </select>
+                <Box sx={{ display: 'flex', gap: '4px' }}>
+                  {[
+                    { code: 'en', flag: '🇬🇧' },
+                    { code: 'de', flag: '🇩🇪' },
+                    { code: 'fr', flag: '🇫🇷' },
+                    { code: 'el', flag: '🇬🇷' },
+                  ].map((lang) => (
+                    <Button
+                      key={lang.code}
+                      onClick={() => setLanguage(lang.code)}
+                      aria-label={`Switch to ${lang.code}`}
+                      sx={{
+                        minWidth: 36,
+                        minHeight: 36,
+                        padding: '4px',
+                        borderRadius: '8px',
+                        fontSize: '22px',
+                        background: language === lang.code ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.2)',
+                        border: language === lang.code ? '2px solid #f59e0b' : '1px solid rgba(255,255,255,0.3)',
+                        '&:hover': { background: 'rgba(255,255,255,0.85)' },
+                      }}
+                    >
+                      {lang.flag}
+                    </Button>
+                  ))}
                 </Box>
               </Box>
 
@@ -124,7 +130,7 @@ function App() {
 
             {renderContent()}
             
-            <Box sx={{ marginTop: '18px', textAlign: 'center' }}>
+            <Box sx={{ marginTop: '12px', textAlign: 'center' }}>
               <Typography variant="body2" sx={{ color: '#6b7280', fontStyle: 'italic' }}>
                 {t.enjoyStay}
               </Typography>

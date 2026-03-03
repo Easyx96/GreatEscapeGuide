@@ -1,10 +1,10 @@
 import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 
 export const ReviewPrompt = ({ t, styles }) => {
-  const airbnbUrl = 'https://www.airbnb.com/rooms/YOUR_LISTING_ID';
+  const googleReviewUrl = 'https://g.page/r/YOUR_GOOGLE_PLACE_ID/review';
   
   return (
-    <Box sx={{ marginTop: '22px' }}>
+    <Box sx={{ marginTop: '14px' }}>
       <Card sx={styles.card}>
         <CardContent>
           <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
@@ -33,19 +33,19 @@ export const ReviewPrompt = ({ t, styles }) => {
                 {t.reviewBody}
               </Typography>
               <Button
-                href={airbnbUrl}
+                href={googleReviewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="contained"
                 sx={{
                   marginTop: '10px',
-                  backgroundColor: '#f97316',
+                  backgroundColor: '#4285F4',
                   color: '#fff',
                   fontWeight: 800,
                   borderRadius: '14px',
                   textTransform: 'none',
                   padding: '10px 14px',
-                  '&:hover': { backgroundColor: '#ea580c' },
+                  '&:hover': { backgroundColor: '#3367D6' },
                 }}
               >
                 ⭐ {t.reviewButton}

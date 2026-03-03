@@ -48,7 +48,7 @@ export const HomeTab = ({ data, t, styles, setActiveTab, weather }) => (
           </Box>
         </Box>
 
-        <Box sx={{ marginTop: '14px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+        <Box sx={{ marginTop: '12px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
           <Button
             href={data.property.maps}
             target="_blank"
@@ -79,14 +79,14 @@ export const HomeTab = ({ data, t, styles, setActiveTab, weather }) => (
           </Button>
         </Box>
 
-        <Box sx={{ marginTop: '18px' }}>
+        <Box sx={{ marginTop: '14px' }}>
           <Typography
             variant="subtitle2"
             sx={{ textTransform: 'uppercase', letterSpacing: '0.08em', color: '#6b7280', fontWeight: 800 }}
           >
             {t.quickShortcuts}
           </Typography>
-          <Box sx={{ marginTop: '10px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+          <Box sx={{ marginTop: '8px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
             <QuickAction
               icon="📍"
               title={t.navigate}
@@ -118,7 +118,7 @@ export const HomeTab = ({ data, t, styles, setActiveTab, weather }) => (
           </Box>
         </Box>
 
-        <Box sx={{ marginTop: '16px' }}>
+        <Box sx={{ marginTop: '12px' }}>
           <Typography variant="body2" sx={{ color: '#6b7280', fontStyle: 'italic' }}>
             {t.tipSave}
           </Typography>

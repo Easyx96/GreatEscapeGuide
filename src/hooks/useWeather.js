@@ -45,12 +45,16 @@ export const useWeather = (t) => {
           return;
         }
         
-        const todayStr = new Date().toISOString().slice(0, 10);
-        const labelForDate = (dateStr, index) => {
-          if (dateStr === todayStr || index === 0) return t.weatherToday;
-          if (index === 1) return t.weatherTomorrow;
-          if (index === 2) return t.weatherDayAfter;
-          return dateStr;
+        const formatDateLabel = (dateStr) => {
+          const date = new Date(dateStr + 'T00:00:00');
+          const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+          const dayName = dayNames[date.getDay()];
+          const day = String(date.getDate()).padStart(2, '0');
+          const month = String(date.getMonth() + 1).padStart(2, '0');
+          return `${dayName} ${day}/${month}`;
+        };
+        const labelForDate = (dateStr) => {
+          return formatDateLabel(dateStr);
         };
         
         const days = time.slice(0, 3).map((dateStr, idx) => ({

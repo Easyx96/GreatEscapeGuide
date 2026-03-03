@@ -4,7 +4,7 @@ import { SectionTitle } from './SectionTitle';
 export const WeatherWidget = ({ weather, t, styles }) => {
   if (weather.loading) {
     return (
-      <Box sx={{ marginTop: '22px' }}>
+      <Box sx={{ marginTop: '14px' }}>
         <Typography variant="body2" sx={{ color: '#6b7280' }}>
           {t.weatherLoading}
         </Typography>
@@ -14,7 +14,7 @@ export const WeatherWidget = ({ weather, t, styles }) => {
   
   if (weather.error || !weather.days.length) {
     return (
-      <Box sx={{ marginTop: '22px' }}>
+      <Box sx={{ marginTop: '14px' }}>
         <Typography variant="body2" sx={{ color: '#9ca3af' }}>
           {t.weatherError}
         </Typography>
@@ -23,7 +23,7 @@ export const WeatherWidget = ({ weather, t, styles }) => {
   }
   
   return (
-    <Box sx={{ marginTop: '22px' }}>
+    <Box sx={{ marginTop: '14px' }}>
       <SectionTitle icon="🌤️" title={t.weatherTitle} subtitle="Ancient Olympia area" styles={styles} />
       <Box sx={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         {weather.days.map((d) => (

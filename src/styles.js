@@ -9,14 +9,14 @@ export const getStyles = (isMobile, headerVisible) => ({
   overlay: {
     minHeight: '100vh',
     background:
-      'linear-gradient(180deg, rgba(6, 40, 25, 0.70) 0%, rgba(243, 244, 246, 0.92) 36%, rgba(243, 244, 246, 0.98) 100%)',
+      'linear-gradient(180deg, rgba(6, 40, 25, 0.70) 0%, rgba(243, 244, 246, 0.95) 8%, rgba(243, 244, 246, 0.98) 100%)',
     paddingBottom: isMobile ? 96 : 48,
   },
   header: {
     background: 'linear-gradient(135deg, rgba(22, 101, 52, 0.95), rgba(6, 95, 70, 0.95))',
     color: '#fff',
     borderRadius: 0,
-    padding: isMobile ? '22px 14px' : '32px 16px',
+    padding: isMobile ? '16px 14px' : '20px 16px',
     position: 'sticky',
     top: 0,
     zIndex: 5,
@@ -32,13 +32,13 @@ export const getStyles = (isMobile, headerVisible) => ({
     lineHeight: 1.1,
   },
   topNav: {
-    marginTop: 14,
+    marginTop: 10,
     display: isMobile ? 'none' : 'flex',
-    gap: 10,
+    gap: 8,
     justifyContent: 'center',
     flexWrap: 'wrap',
   },
-  shell: { marginTop: isMobile ? 16 : 18 },
+  shell: { marginTop: isMobile ? 6 : 8 },
   card: {
     borderRadius: 18,
     background: 'rgba(255,255,255,0.94)',
